@@ -12,9 +12,11 @@ def make_instrument!
   [bleep, instrument]
 end
 
-while song = gets.strip
+loop do
+  print '🎼 '
+  song = gets.strip
   bleep, instrument = make_instrument!
-  puts "playing: #{song}"
+  puts "🔊 #{song}"
   bleep.tune(instrument, song)
   bleep.play
   sleep 1 while !bleep.stopped?
